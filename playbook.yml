@@ -1,0 +1,22 @@
+---
+- name: Change json if need it
+  hosts: localhost
+  gather_facts: true
+  
+  tasks:
+
+  - name: print ip address
+    debug:
+      msg: "ip_adsdress is {{ ansible_default_ipv4.address }}"
+
+  - name: Ensure that ip address is current
+    lineinfile:
+      path: ./config.json
+      regexp: '(.*)({{ item }})([^0-9]*)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(.*)'
+      line: '\1\2": "http://{{ ansible_default_ipv4.address }}\5'
+      backrefs: yes
+    loop:
+      - snapshotProxyApi
+      - newApi
+      - tilesUrl
+      - websocketAPI

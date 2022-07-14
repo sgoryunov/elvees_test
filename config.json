@@ -1,0 +1,37 @@
+{
+"settingApi": "http://192.168.3.5:8081",
+"streamApi": "http://192.168.3.5:9080",
+"newStreamApi": "http://10.205.11.232:9080",
+"websocketStream": "192.168.3.5",
+"maxStretchPercentage": 20,
+"videoApi": "http://10.205.11.32:8100",
+"mapApi": "ws://192.168.3.5:8099",
+"snapshotProxyApi": "http://172.20.10.3:8081",
+"newApi": "http://172.20.10.3:9080",
+"tilesUrl": "http://172.20.10.3",
+"websocketAPI": "http://172.20.10.3:8099",
+"squarer": [
+{
+"id": "paris",
+"name": "Париж",
+"size": [6, 6]
+},
+{
+"id": "squarer-1",
+"name": "Квадратер 1",
+"size": [6, 6]
+},
+{
+"id": "squarer-2",
+"name": "Квадратер 2",
+"size": [6, 6]
+}
+],
+"disableSnapshot": true,
+"useStubServices": false,
+"simpleMenu": false,
+"notificationDuration": 10000,
+"integrationStatusInterval": 500,
+"gettingDeviceInterval": 10000,
+"objectRadius": 48
+}
